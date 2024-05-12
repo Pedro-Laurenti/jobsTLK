@@ -1,5 +1,4 @@
 # mern-job-portal-starter-files
-![mern-job-portal-starter-files](/src/assets/MERN%20STACK.png)
 
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
