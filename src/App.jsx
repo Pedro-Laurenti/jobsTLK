@@ -1,10 +1,18 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
+import Navbar from "./Components/Navbar"
+import Footer from "./Components/Footer"
+import './App.css'
 
 const App = () => {
   return (
-    <div className='h-screen flex items-center justify-center'>
-      <h1 className='text-4xl font-bold'>MERN Stack <span className='text-indigo-700'>Job Portal</span> Starter Files</h1>
-    </div>
+  <>
+    <Navbar />
+      <div className="min-h-screen bg-appWhite-300">
+        <Outlet />
+      </div>
+    <Footer />
+  </>
   )
 }
 
