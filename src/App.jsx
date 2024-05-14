@@ -8,7 +8,7 @@ const App = () => {
   return (
   <>
     <Navbar />
-      <div className="min-h-screen bg-appWhite-300">
+      <div className="min-h-[150vh] bg-appWhite-300">
         <Outlet />
       </div>
     <Footer />
