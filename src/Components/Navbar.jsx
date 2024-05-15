@@ -46,8 +46,10 @@ const Navbar = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+    
     return (
-        <header className={`max-w-screen-2xl fixed z-20 container mx-auto xl:px-24 px-4 bg-appWhite-200 ${scrollActive ? 'py-10' : 'py-5'}`}>
+        <header className={`max-w-screen-2xl fixed z-20 container mx-auto xl:px-24 px-4 bg-appWhite-200
+        ${scrollActive ? 'py-10' : 'py-5'}`}>
             <nav className='flex flex-row justify-between items-center'>
                 
                 {/* Imagem */}
@@ -87,7 +89,8 @@ const Navbar = () => {
             </nav>
 
             {/* NavItens mobile */}
-            <div className={`md:hidden absolute right-0 w-2/3 h-auto px-4 py-5 rounded-sm  bg-appBlue-800 ${isMenuOpen ? "" : "hidden"}`}>
+            <div className={`md:hidden absolute right-0 w-2/3 h-auto px-4 py-5 rounded-sm  bg-appBlue-800
+            ${isMenuOpen ? "" : "hidden"} ${scrollActive ? 'mt-10' : 'mt-5'}`}>
                 <ul>
                     {navItens.map(({path, title}) => (
                         <li key={path} className='text-base text-appWhite-100 hover:text-appBlue-500 first:text-white py-1'>
