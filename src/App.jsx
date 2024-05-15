@@ -9,7 +9,7 @@ const App = () => {
   <>
     <Navbar />
       <div className="min-h-screen bg-appWhite-300">
-        <Outlet /> c
+        <Outlet />
       </div>
     <Footer />
   </>
