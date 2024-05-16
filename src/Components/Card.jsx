@@ -1,8 +1,32 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import {FiCalendar, FiClock, FiDollarSign, FiMapPin} from 'react-icons/fi';
+
 
 const Card = ({data}) => {
+    const {companyName, jobTitle, companyLogo, minPrice, maxPrice, salaryType, jobLocation, employmentType, postingDate, description} = data;
+
     return (
-        <div>{data.jobTitle}</div>
+        <section className='p-5 m-5 border-appWhite-300 border-2 cursor-pointer'>
+            <Link to={"/"} className='flex gap-4 flex-col sm:flex-row items-start'>
+                <img src={companyLogo} alt="logo"/>
+
+                <div>
+                    <h4 className=' text-primary mb-1'>{companyName}</h4>
+                    <h3 className=' text-lg font-semibold mb-2'>{jobTitle}</h3>
+
+                    <div className=' text-primary/70 text-base flex flex-wrap gap-4 mb-2'>
+                        <span className='flex items-center gap-2'><FiMapPin/>{jobLocation}</span>
+                        <span className='flex items-center gap-2'><FiClock/>{employmentType}</span>
+                        <span className='flex items-center gap-2'><FiDollarSign/>{minPrice} - {maxPrice}</span>
+                        <span className='flex items-center gap-2'><FiCalendar/>{postingDate}</span>
+                    </div>
+
+                    <p className='text-base text-primary/70'>{description}</p>
+                </div>
+
+            </Link>
+        </section>
     )
 }
 

@@ -48,7 +48,7 @@ const Navbar = () => {
     }, []);
     
     return (
-        <header className={`max-w-screen-2xl fixed z-20 container mx-auto xl:px-24 px-4 bg-appWhite-200
+        <header className={`w-screen fixed z-20 mx-auto xl:px-24 px-4 bg-appWhite-200
         ${scrollActive ? 'py-10' : 'py-5'}`}>
             <nav className='flex flex-row justify-between items-center'>
                 

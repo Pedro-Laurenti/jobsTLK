@@ -11,7 +11,7 @@ export default {
         secundary:"#989898",
         appWhite: {
           100: "#ffffff",
-          200: "#fefefe",
+          200: "#fafafa",
           300: "#f2f2f2",
           400: "#e6e6e6",
           500: "#d9d9d9",
