@@ -17,10 +17,10 @@ const JobPostingDate = ({handleChange}) => {
     return (
     <div>
         <h4 className='text-lg font-medium mb-2'>Postado em</h4>
-
+        
         <div>
             <label className="sidebar-label-container">
-            <input type="radio" name='test' id='test' value="" onChange={handleChange} />
+            <input type="radio" name='test3' id='test' value="" onChange={handleChange} />
                 <span className='checkmark'></span>Todo período
             </label>
 

@@ -80,13 +80,15 @@ const Home = () => {
                     salaryType,
                     employmentType,
                     postingDate
-                }) => (
-                jobLocation.toLowerCase() === selected.toLowerCase() ||
-                parseInt(maxPrice) <= parseInt(selected) ||
-                salaryType.toLowerCase() === selected.toLowerCase() ||
-                employmentType.toLowerCase() === selected.toLowerCase()
-
-            ));
+                }) => postingDate >= selected
+                    
+                // (
+                // jobLocation.toLowerCase() === selected.toLowerCase() ||
+                // parseInt(maxPrice) <= parseInt(selected) ||
+                // salaryType.toLowerCase() === selected.toLowerCase() ||
+                // employmentType.toLowerCase() === selected.toLowerCase()
+                // )
+        );
             console.log(filteredJobs)
         }
 
