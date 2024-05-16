@@ -27,19 +27,19 @@ const JobPostingDate = ({handleChange}) => {
             <InputField
                 onChange={handleChange}
                 value={twentyFourHoursAgoDate} title="Últimas 24 horas"
-                name="test" 
+                name="test3" 
             />
             <InputField
                 handleChange={handleChange}
                 value={sevenDaysAgoDate}
                 title="Últimos 7 dias"
-                name="test"
+                name="test3"
             />
             <InputField
                 handleChange={handleChange}
                 value={thirtyDaysAgoDate}
                 title="Último mês"
-                name="test"
+                name="test3"
             />
         </div>
     </div>

@@ -79,10 +79,14 @@ const Home = () => {
                     experienceLevel,
                     salaryType,
                     employmentType,
-                    postingDate,
-                }) => 
-                postingDate >= selected
-            );
+                    postingDate
+                }) => (
+                jobLocation.toLowerCase() === selected.toLowerCase() ||
+                parseInt(maxPrice) <= parseInt(selected) ||
+                salaryType.toLowerCase() === selected.toLowerCase() ||
+                employmentType.toLowerCase() === selected.toLowerCase()
+
+            ));
             console.log(filteredJobs)
         }
 
