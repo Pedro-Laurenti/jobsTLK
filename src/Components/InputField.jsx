@@ -6,7 +6,7 @@ const InputField = ({handleChange, value, title, name}) => {
             <input
                 type="radio"
                 name={name} 
-                value={value}
+                value={title}
                 onChange={handleChange}
             />
             <span className='checkmark'></span>{title}

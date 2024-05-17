@@ -61,6 +61,21 @@ const Home = () => {
         }
     }
 
+    // NORMALIZATION IN FILTERS
+    function normalizeString(str) {
+        if (!str) return ''; // Evita erros caso str seja null ou undefined
+        // Converter para minúsculas
+        str = str.toLowerCase();
+        
+        // Substituir espaços por traços
+        str = str.replace(/\s+/g, '-');
+        
+        // Remover acentos
+        str = str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        
+        return str;
+    }
+
     // MAIN FUNCTION
     const filteredData = (jobs, selected, query) => {
         let filteredJobs = jobs;
@@ -71,7 +86,9 @@ const Home = () => {
         }
 
         // category filter
-        if(selected){
+        if (selected) {
+            const normalizedSelected = normalizeString(selected);
+        
             filteredJobs = filteredJobs.filter(
                 ({
                     jobLocation,
@@ -83,16 +100,17 @@ const Home = () => {
                 }) => 
                     
                 (
-                    jobLocation.toLowerCase() === selected.toLowerCase() ||
-                    parseInt(maxPrice) <= parseInt(selected) ||
-                    salaryType.toLowerCase() === selected.toLowerCase() ||
-                    employmentType.toLowerCase() === selected.toLowerCase() ||
-                    postingDate >= selected
+                    normalizeString(jobLocation) === normalizedSelected ||
+                    parseInt(maxPrice) >= parseInt(selected) ||
+                    postingDate >= selected ||
+                    normalizeString(salaryType) === normalizedSelected ||
+                    normalizeString(employmentType) === normalizedSelected ||
+                    normalizeString(experienceLevel) === normalizedSelected
                 )
-        );
-            console.log(filteredJobs)
+            );
+            // console.log(filteredJobs);
         }
-
+        
         // slice data per current page
         const{startIndex, endIndex} = calculatePageRange();
         filteredJobs = filteredJobs.slice(startIndex, endIndex)
@@ -107,7 +125,6 @@ const Home = () => {
     return (
         <div>
             <Banner query={query} handleInputChange={handleInputChange}/>
-
 
             {/* main content */}
             <div className=' w-full md:grid grid-cols-4 gap-8 lg:px-24 px-4 py-12'>
