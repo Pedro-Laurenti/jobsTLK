@@ -5,7 +5,6 @@ const JobPostingDate = ({handleChange}) => {
     const now = new Date();
 
     const twentyFourHoursAgo =  new Date( now - 24 * 60 * 60 * 1000);
-    
     const sevenDaysAgo =  new Date( now - 7 * 24 * 60 * 60 * 1000);
     const thirtyDaysAgo =  new Date( now - 30 *24 * 60 * 60 * 1000);
     
@@ -20,26 +19,26 @@ const JobPostingDate = ({handleChange}) => {
         
         <div>
             <label className="sidebar-label-container">
-            <input type="radio" name='test3' id='test' value="" onChange={handleChange} />
+            <input type="radio" name='test' id='test' value={1000000000000000000000000000} onChange={handleChange} />
                 <span className='checkmark'></span>Todo período
             </label>
 
             <InputField
-                onChange={handleChange}
+                handleChange={handleChange}
                 value={twentyFourHoursAgoDate} title="Últimas 24 horas"
-                name="test3" 
+                name="test"
             />
             <InputField
                 handleChange={handleChange}
                 value={sevenDaysAgoDate}
                 title="Últimos 7 dias"
-                name="test3"
+                name="test"
             />
             <InputField
                 handleChange={handleChange}
                 value={thirtyDaysAgoDate}
                 title="Último mês"
-                name="test3"
+                name="test"
             />
         </div>
     </div>
