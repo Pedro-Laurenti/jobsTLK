@@ -3,6 +3,7 @@ import Banner from  '../Components/Banner'
 import Card from '../Components/Card';
 import Jobs from './Jobs';
 import Sidebar from '../Sidebar/Sidebar';
+import Newsletter from '../Components/Newsletter';
 
 const Home = () => {
     const [selectedCategory, setSelectedCategory] = useState(null);
@@ -148,13 +149,13 @@ const Home = () => {
                                 <button onClick={prevPage} disabled={currentPage === 1} className='hover:underline'>Anterior</button>
                                 <span className='mx-2'>Pág. {currentPage} de {Math.ceil(filteredItems.length / itemsPerPage)} </span>
                                 <button onClick={nextPage} disabled={currentPage === Math.ceil(filteredItems.length / itemsPerPage)} className='hover:underline disabled:no-underline	'>Próximo</button>
-                            </div>
+                            </div> 
                         ) : ""
                     }
                     
                 </div>
 
-                <div className=' bg-appWhite-100 p-4 rounded'>R</div>
+                <div className=' bg-appWhite-100 p-4 rounded'><Newsletter /></div>
             </div>
         </div>
     )
