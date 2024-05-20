@@ -135,7 +135,7 @@ const Home = () => {
                 <div className='col-span-2 bg-appWhite-100 p-4 rounded-sm'>
                     {
                         isLoading ? (<p className='font-medium'>Carregando...</p>) : result.length > 0 ? (<Jobs result={result}/>) : <>
-                            <h3 className='text-lg font-bold mb-2'>{result.length} vagas</h3>
+                            <h3 className='text-lg font-bo ld mb-2'>{result.length} vagas</h3>
                             <p>Nenhum cargo encontrado!</p>
                         </>
                     }

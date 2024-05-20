@@ -10,7 +10,7 @@
     "jobLocation": "Nerópolis",
     "postingDate": "2024-05-11",
     "experienceLevel": "Qualquer experiência",
-    "employmentType": "Full-time",
+    "employmentType": "Integral",
     "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
   },
   {
@@ -24,7 +24,7 @@
     "jobLocation": "Goianésia",
     "postingDate": "2024-04-20",
     "experienceLevel": "Estágio",
-    "employmentType": "Temporary",
+    "employmentType": "Temporário",
     "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
   },
   {
@@ -38,7 +38,7 @@
     "jobLocation": "Taguatinga",
     "postingDate": "2024-05-17",
     "experienceLevel": "Qualquer experiência",
-    "employmentType": "Full-time", 
+    "employmentType": "Integral", 
     "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
   },
   {
@@ -52,7 +52,7 @@
     "jobLocation": "Anápolis",
     "postingDate": "2024-05-05",
     "experienceLevel": "Superior",
-    "employmentType": "Part-time",
+    "employmentType": "Meio expediente",
     "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
   },
   {
@@ -66,7 +66,7 @@
     "jobLocation": "Anápolis",
     "postingDate": "2024-05-15",
     "experienceLevel": "Estágio",
-    "employmentType": "Full-time",
+    "employmentType": "Integral",
     "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
   },
   {
@@ -80,7 +80,7 @@
     "jobLocation": "Jaraguá",
     "postingDate": "2024-05-12",
     "experienceLevel": "Estágio",
-    "employmentType": "Temporary",
+    "employmentType": "Temporário",
     "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
   },
   {
@@ -94,7 +94,7 @@
     "jobLocation": "Nerópolis",
     "postingDate": "2021-05-13",
     "experienceLevel": "Pós graduação",
-    "employmentType": "Full-time",
+    "employmentType": "Integral",
     "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
   }
 ]

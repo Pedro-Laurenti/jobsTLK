@@ -1,9 +1,10 @@
 import React from 'react'
+import InputField from '../Components/InputField'
 
-const EmploymentType = () => {
+const EmploymentType = ({handleChange}) => {
     return (
         <div>
-            <h4 className='text-lg font-medium mb-2'>Experiência</h4>
+            <h4 className='text-lg font-medium mb-2'>Tipo</h4>
 
             <div>
                 <label className="sidebar-label-container">
@@ -11,10 +12,9 @@ const EmploymentType = () => {
                     <span className='checkmark'></span>Todos
                 </label>
 
-                <InputField handleChange={handleChange} value="Qualquer experiência" title="Qualquer experiência" name="test" />
-                <InputField handleChange={handleChange} value="Estágio" title="Estágio" name="test" />
-                <InputField handleChange={handleChange} value="Superior" title="Superior" name="test" />
-                <InputField handleChange={handleChange} value="Pós graduação" title="Pós graduação" name="test" />
+                <InputField handleChange={handleChange} value="Integral" title="Integral" name="test" />
+                <InputField handleChange={handleChange} value="Temporário" title="Temporário" name="test" />
+                <InputField handleChange={handleChange} value="Meio expediente" title="Meio expediente" name="test" />
             </div>
         </div>
     )
