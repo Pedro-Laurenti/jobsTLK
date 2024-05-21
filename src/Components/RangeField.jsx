@@ -7,14 +7,14 @@ const RangeField = ({ handleChange, value, name, initialValue }) => {
     useEffect(() => {
         if (initialValue) {
             setPercentage(initialValue);
-            handleChange({ target: { name, value: initialValue } }); // Propague o valor inicial para o handleChange
+            handleChange({ target: { name, value: initialValue } });
         }
     }, [initialValue, handleChange, name]);
 
     const logValue = () => {
         if (inputRef.current) {
             setPercentage(inputRef.current.value);
-            handleChange({ target: { name, value: inputRef.current.value } }); // Propague o novo valor para o handleChange
+            handleChange({ target: { name, value: inputRef.current.value } });
         }
     };
 
@@ -25,7 +25,7 @@ const RangeField = ({ handleChange, value, name, initialValue }) => {
                     className="w-full"
                     type="range"
                     name={name}
-                    value={value || percentage} // Use value se for fornecido, caso contrário, use o estado interno percentage
+                    value={value || percentage}
                     onChange={(e) => {
                         handleChange(e);
                         logValue();
@@ -33,7 +33,7 @@ const RangeField = ({ handleChange, value, name, initialValue }) => {
                     ref={inputRef}
                     min="1"
                     max="100"
-                    step="1"
+                    step="10"
                 />
             </label>
             <div className="text-end min-w-fit" style={{ width: `${value || percentage}%` }}>

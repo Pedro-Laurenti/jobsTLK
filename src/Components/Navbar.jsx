@@ -15,16 +15,16 @@ const Navbar = () => {
     const navItens = [
         {
             path: "/",
-            title: "Start a search"
+            title: "Início"
         }, {
-            path: "/my-job",
-            title: "My jobs"
+            path: "/my-jobs",
+            title: "Candidaturas"
         }, {
             path: "/salary",
-            title: "Salary estimate"
+            title: "Salário estimado"
         }, {
-            path: "/post-job",
-            title: "Post a job"
+            path: "/nova-vaga",
+            title: "Postar vaga"
         }
     ]
 
@@ -49,7 +49,7 @@ const Navbar = () => {
     
     return (
         <header className={`w-screen fixed z-20 mx-auto xl:px-24 px-4 bg-appWhite-200
-        ${scrollActive ? 'py-10' : 'py-5'}`}>
+            ${scrollActive ? 'py-10' : 'py-5'}`}>
             <nav className='flex flex-row justify-between items-center'>
                 
                 {/* Imagem */}
@@ -78,11 +78,11 @@ const Navbar = () => {
 
                 {/* Mobile menu */}
                 <div className='md:hidden block '>
-                <button onClick={handleMenuToggler}>
-                    {isMenuOpen ? 
-                        <IoMdClose className='w-8 h-8 text-primary' /> : 
-                        <IoMenu className='w-8 h-8 text-primary' />
-                    }
+                    <button onClick={handleMenuToggler}>
+                        {isMenuOpen ? 
+                            <IoMdClose className='w-8 h-8 text-primary' /> : 
+                            <IoMenu className='w-8 h-8 text-primary' />
+                        }
                     </button>
                 </div>
 
