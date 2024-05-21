@@ -12,7 +12,18 @@ const CreateJob = () => {
 
     const onSubmit = (data) => {
         data.skills = selectedOption;
-        console.log(data);
+        // console.log(data);
+        fetch("http://localhost:3000/post-job", {
+            method:'POST',
+            headers:{'content-type': 'application/json'},
+            body:JSON.stringify(data)
+        }).then(res => res.json()).then((result) => {
+            console.log(result);
+            if(result.acknowledged === true ){
+                alert("Vaga postada com sucesso!")
+            }
+            reset()
+        });
     };
 
     const options = [
@@ -131,7 +142,7 @@ const CreateJob = () => {
                                 <label className='block mb-2 text-lg'>Logo da empresa
                                     <input
                                         type="url"
-                                        placeholder='COle a URL da logo: https://weshare.com/img1'
+                                        placeholder='Cole a URL da logo: https://weshare.com/img1'
                                         {...register("companyLogo")}
                                         className='create-job-input'
                                     />
