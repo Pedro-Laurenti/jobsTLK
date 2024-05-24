@@ -53,6 +53,13 @@ async function run() {
             res.send(jobs);
         });
 
+        // get jobs by email
+        app.get("/myJobs/:email", async(req,res) =>{
+            // console.log(req.params.email)
+            const jobs = await jobsCollections.find({postedBy : req.params.email}).toArray();
+            res.send(jobs);
+        })
+
     } catch (err) {
         console.error("Failed to connect to MongoDB", err);
     }
