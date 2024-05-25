@@ -48,13 +48,13 @@ const CreateJob = () => {
                         <div className='create-job-flex'>
                             <div className='lg:w-1/2 w-full'>
                                 <label className='block mb-2 text-lg'>Título da vaga
-                                    <input type="text" placeholder="Título" {...register("jobTitle", {required: true, maxLength: 80})} className='create-job-input' />
+                                    <input type="text" placeholder="Título" {...register("jobTitle", {required: false, maxLength: 80})} className='create-job-input' />
                                 </label>
                             </div>
 
                             <div className='lg:w-1/2 w-full'>
                                 <label className='block mb-2 text-lg'>Empresa
-                                    <input type="text" placeholder="Ex: Therapies Love Kids" {...register("companyName", {required: true, maxLength: 80})} className='create-job-input' />
+                                    <input type="text" placeholder="Ex: Therapies Love Kids" {...register("companyName", {required: false, maxLength: 80})} className='create-job-input' />
                                 </label>
                             </div>
 
@@ -64,13 +64,13 @@ const CreateJob = () => {
                         <div className='create-job-flex'>
                             <div className='lg:w-1/2 w-full'>
                                 <label className='block mb-2 text-lg'>Salário mínimo
-                                    <input type="text" placeholder="Salário mínimo" {...register("minPrice", {required: true, maxLength: 80})} className='create-job-input' />
+                                    <input type="text" placeholder="Salário mínimo" {...register("minPrice", {required: false, maxLength: 80})} className='create-job-input' />
                                 </label>
                             </div>
 
                             <div className='lg:w-1/2 w-full'>
                                 <label className='block mb-2 text-lg'>Salário máximo
-                                <input type="text" placeholder="Salário máximo" {...register("maxPrice", {required: true, maxLength: 80})} className='create-job-input' />
+                                <input type="text" placeholder="Salário máximo" {...register("maxPrice", {required: false, maxLength: 80})} className='create-job-input' />
                                 </label>
                             </div>
 
@@ -80,7 +80,7 @@ const CreateJob = () => {
                         <div className='create-job-flex'>
                             <div className='lg:w-1/2 w-full'>
                                 <label className='block mb-2 text-lg'>Tipo de salário
-                                    <select {...register("salaryType", { required: true })} className='create-job-input'>
+                                    <select {...register("salaryType", { required: false })} className='create-job-input'>
                                         <option value="">Escolha</option>
                                         <option value="Hora">Hora</option>
                                         <option value="Mensal">Mensal</option>
@@ -91,7 +91,7 @@ const CreateJob = () => {
 
                             <div className='lg:w-1/2 w-full'>
                                 <label className='block mb-2 text-lg'>Localização
-                                    <input type="text" placeholder="Localização" {...register("jobLocation", {required: true, maxLength: 80})} className='create-job-input' />
+                                    <input type="text" placeholder="Localização" {...register("jobLocation", {required: false, maxLength: 80})} className='create-job-input' />
                                 </label>
                             </div>
 
@@ -104,13 +104,13 @@ const CreateJob = () => {
                                     <input
                                         type="date"
                                         placeholder="Ex: 2024-01-12"
-                                        {...register("postingDate",{required: true, maxLength: 80})} className='create-job-input'
+                                        {...register("postingDate",{required: false, maxLength: 80})} className='create-job-input'
                                     />
                                 </label>
                             </div>
                             <div className='lg:w-1/2 w-full'>
                                 <label className='block mb-2 text-lg'>Nível de experiência
-                                    <select {...register("experienceLevel", { required: true })} className='create-job-input'>
+                                    <select {...register("experienceLevel", { required: false })} className='create-job-input'>
                                         <option value="">Escolha</option>
                                         <option value="Superior">Superior</option>
                                         <option value="Estágio">Estágio</option>
@@ -151,7 +151,7 @@ const CreateJob = () => {
 
                             <div className='lg:w-1/2 w-full'>
                                 <label className='block mb-2 text-lg'>Regime de trabalho
-                                    <select {...register("employmentType", { required: true })} className='create-job-input'>
+                                    <select {...register("employmentType", { required: false })} className='create-job-input'>
                                         <option value="">Escolha</option>
                                         <option value="Integral">Integral</option>
                                         <option value="Meio expediente">Meio expediente</option>

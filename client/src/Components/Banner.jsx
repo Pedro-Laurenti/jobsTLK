@@ -5,7 +5,7 @@ import { FiMapPin, FiSearch } from "react-icons/fi";
 const Banner = ({query, handleInputChange}) => {
     return (
         <div className='md:py-40 py-40 bg-appWhite-100'>
-            <div className='w-screen mx-auto xl:px-24 px-4 container '>
+            <div className='w-full mx-auto xl:px-24 px-4 container '>
 
                 <h1 className='text-5xl font-bold text-primary mb-4'>Encontre a <span className=' text-appBlue-500'>sua vaga</span> aqui.</h1>
                 <p className='text-lg text-black/70 mb-8'>Trabalhe na clínica de terapia infantil especializada em autismo mais perto de sua casa.</p>
