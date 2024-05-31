@@ -52,6 +52,16 @@ async function run() {
             const jobs = await jobsCollections.find({}).toArray();
             res.send(jobs);
         });
+        
+        // Get single jobs
+        app.get("/all-jobs/:id", async (req, res) => {
+            const id = req.params.id;
+            const job = await jobsCollections.findOne({
+                _id: new ObjectId(id)
+            })
+            res.send(job)
+        })
+
 
         // get jobs by email
         app.get("/myJobs/:email", async(req,res) =>{
@@ -67,6 +77,23 @@ async function run() {
             const result = await jobsCollections.deleteOne(filter);
             res.send(result);
         });
+
+        //UPDATE A JOB
+
+        app.patch("/update-job/:id", async(req,res) =>{
+            const id = req.params.id;
+            const jobData = req.body;
+            const filter = { _id: new ObjectId(id) };
+            const options = { upsert: true };
+            const updateDoc = {
+                $set:{
+                    ...jobData
+                },
+            };
+
+            const result = await jobsCollections.updateOne(filter, updateDoc, options );
+            res.send(result)
+        })
 
     } catch (err) {
         console.error("Failed to connect to MongoDB", err);
