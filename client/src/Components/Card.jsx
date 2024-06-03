@@ -4,11 +4,11 @@ import {FiCalendar, FiClock, FiDollarSign, FiMapPin} from 'react-icons/fi';
 
 
 const Card = ({data}) => {
-    const {companyName, jobTitle, companyLogo, minPrice, maxPrice, salaryType, jobLocation, employmentType, postingDate, description} = data;
+    const {_id, companyName, jobTitle, companyLogo, minPrice, maxPrice, salaryType, jobLocation, employmentType, postingDate, description} = data;
 
     return (
         <section className='p-5 m-5 border-appWhite-300 border-2 cursor-pointer'>
-            <Link to={"/"} className='flex gap-4 flex-col sm:flex-row items-start'>
+            <Link to={`/vaga/${_id}`} className='flex gap-4 flex-col sm:flex-row items-start'>
                 <img src={companyLogo} alt="logo"/>
 
                 <div>

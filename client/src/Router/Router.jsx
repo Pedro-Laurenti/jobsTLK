@@ -5,6 +5,8 @@ import CreateJob from "../Pages/CreateJob";
 import MyJobs from "../Pages/MyJobs";
 import SalaryPage from "../Pages/SalaryPage";
 import UpdateJob from "../Pages/UpdateJob";
+import Login from "../Components/Login";
+import JobDetail from "../Pages/JobDetail";
 
 const router = createBrowserRouter([
     {
@@ -27,8 +29,16 @@ const router = createBrowserRouter([
                 path: "editar/:id",
                 element: <UpdateJob/>,
                 loader: ({params}) => fetch(`http://localhost:3000/all-jobs/${params.id}`)
+            }, {
+                path: "vaga/:id",
+                element: <JobDetail/>,
+                loader: ({params}) => fetch(`http://localhost:3000/all-jobs/${params.id}`)
             }
         ]
+    },
+    {
+        path:"/login",
+        element: <Login />
     }
 ]);
 
