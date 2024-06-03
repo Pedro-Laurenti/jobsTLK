@@ -31,10 +31,27 @@ async function run() {
         await client.db("admin").command({ ping: 1 });
         console.log("Conectado com sucesso ao MongoDB!");
 
+        // Generate a unique numeric ID
+        async function generateUniqueNumericId() {
+            let isUnique = false;
+            let newId;
+
+            while (!isUnique) {
+                newId = Math.floor(Math.random() * 1000000000); // Generate a random numeric ID
+                const existingJob = await jobsCollections.findOne({ _id: newId });
+                if (!existingJob) {
+                    isUnique = true;
+                }
+            }
+
+            return newId;
+        }
+
         // Post a job
         app.post("/post-job", async (req, res) => {
             const body = req.body;
             body.createAt = new Date();
+            body._id = await generateUniqueNumericId();
 
             const result = await jobsCollections.insertOne(body);
             if (result.acknowledged) {
@@ -55,10 +72,8 @@ async function run() {
         
         // Get single jobs
         app.get("/all-jobs/:id", async (req, res) => {
-            const id = req.params.id;
-            const job = await jobsCollections.findOne({
-                _id: new ObjectId(id)
-            })
+            const id = parseInt(req.params.id, 10);
+            const job = await jobsCollections.findOne({ _id: id });
             res.send(job)
         })
 
