@@ -20,7 +20,7 @@ const Navbar = () => {
             path: "/minhas-vagas",
             title: "Minhas vagas"
         }, {
-            path: "/salary",
+            path: "/salario",
             title: "Salário estimado"
         }, {
             path: "/nova-vaga",
