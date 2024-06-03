@@ -90,7 +90,7 @@ const MyJobs = () => {
                                 </div>
                                 <div className="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
                                     <Link to="/nova-vaga"><button
-                                        className="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                        className="bg-appBlue-500 text-white hover:bg-appBlue-600 text-xs font-bold uppercase px-6 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                         type="button">Nova vaga</button></Link>
                                 </div>
                             </div>
@@ -185,12 +185,12 @@ const MyJobs = () => {
 
                 {
                     currentPage > 1 && (
-                        <button className='hover:underline'>Prev</button>
+                        <button className='hover:underline' onClick={prevPage}>Prev</button>
                     ) 
                 }
                 {
                     indexOfLastItem < jobs.length && (
-                        <button className='hover:underline'>Next</button>
+                        <button className='hover:underline' onClick={nextPage}>Next</button>
                     )
                 }
 

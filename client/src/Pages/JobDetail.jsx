@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom'
 import Swal from 'sweetalert2'
 import PageHeader from '../Components/PageHeader';
+import {FiCalendar, FiClock, FiDollarSign, FiMapPin} from 'react-icons/fi';
 
 const JobDetail = () => {
     const {id} = useParams();
@@ -23,12 +24,23 @@ const JobDetail = () => {
     return (
         <div className='max-w-screen mx-auto xl:px-24 px-4'>
             <div className='pt-40 px-4 lg:px-16'>
-            <PageHeader title={"Detalhes da vaga"} path={"detalhes"} />
-            <div className='pt-10'>
-                <h2>Id da vaga: {id}</h2>
-                <h1 className='text-5xl font-bold text-primary mb-4'>{job.jobTitle}</h1>
-                <button className='bg-appBlue-500 px-8 py-2 text-white' onClick={handleApply}>Candidatar-se</button>
-            </div>
+                <PageHeader title={"Detalhes da vaga"} path={"detalhes"} />
+                <div className='pt-10'>
+                    <h2>Id da vaga: {id}</h2>
+                    <h1 className='text-5xl font-bold text-primary mb-4'>{job.jobTitle}</h1>
+                    <button className='bg-appBlue-500 px-8 py-2 text-white' onClick={handleApply}>Candidatar-se</button>
+                </div>
+
+                <div className='mt-10 py-2 px-5 bg-white rounded-2xl'>
+                <p>
+                    {job.description}
+                </p>
+
+                <div>
+                    R${job.minPrice} - R${job.maxPrice}
+                </div>
+
+                </div>
             </div>
         </div>
 

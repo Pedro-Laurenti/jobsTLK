@@ -9,7 +9,7 @@ const Card = ({data}) => {
     return (
         <section className='p-5 m-5 border-appWhite-300 border-2 cursor-pointer'>
             <Link to={`/vaga/${_id}`} className='flex gap-4 flex-col sm:flex-row items-start'>
-                <img src={companyLogo} alt="logo"/>
+            <img src={`data:image/jpeg;base64,${companyLogo}`} alt="Logo da empresa" />
 
                 <div>
                     <h4 className=' text-primary mb-1'>{companyName}</h4>

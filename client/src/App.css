@@ -137,8 +137,6 @@ li {
   border-color: #f7f7f7;
 }
 
-
-
 /* create a job page */
 
 .create-job-flex{
@@ -146,5 +144,5 @@ li {
 }
 
 .create-job-input{
-  @apply block w-full flex-1 bg-appWhite-200 py-1.5 pl-3 text-gray-800 placeholder:text-gray-400 focus:outline-none sm:text-sm sm:leading-6
+  @apply block w-full flex-1 bg-appWhite-500 py-1.5 pl-3 min-h-10 rounded-lg text-gray-800 placeholder:text-gray-400 focus:outline-none sm:text-sm sm:leading-6
 }
